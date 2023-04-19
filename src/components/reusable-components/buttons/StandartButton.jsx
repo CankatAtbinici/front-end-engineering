@@ -1,6 +1,6 @@
 import React from 'react';
 
-function StandartButton({ title = "Standart Button", onClick = null, color = "primary", isResponsive = true , size = null }) {
+function StandartButton({ title = "Standart Button", onClick = null, color = "primary", size = null }) {
 
   let colorClass = '';
   let buttonSizeClass ="";
@@ -42,7 +42,7 @@ function StandartButton({ title = "Standart Button", onClick = null, color = "pr
 
   return (
     <button
-      className={`px-4 py-2 rounded ${buttonSizeClass} ${colorClass} ${isResponsive ? 'w-full' : ''}`}
+      className={`px-4 py-2 rounded ${buttonSizeClass} ${colorClass}`}
       onClick={onClick}
     >
       {title}
