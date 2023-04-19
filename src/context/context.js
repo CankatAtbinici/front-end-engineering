@@ -1,16 +1,42 @@
 import { createContext, useState } from "react";
+import {fakeData} from "../fakeData/fakeData"
 
 export const Context = createContext();
 
 const ModalContext = ({ children }) => {
 
-    const [state , setState] = useState(true)
+   const [projects, setProjects] = useState(fakeData);
+   const [searchProject, setSearchProject] = useState('');
+   const [selectProject, setSelectProject] = useState('');
 
+
+   //Project filter functions
+   const selectProjectsByCategory = Object.values(projects).filter((item) => {
+    return item.type.includes(selectProject);
+  });
+  
+   const searchProjectsByTitle = projects.filter((item) => {
+		const result = item.projectName.toLowerCase().includes(searchProject.toLowerCase())
+			? item
+			: searchProject === ''
+			? item
+			: '';
+		return result;
+	});
+
+ 
+  
   return (
     <Context.Provider
       value={{
-        state,
-        setState
+        projects,
+        setProjects,
+        searchProject,
+        setSearchProject,
+        selectProject,
+        setSelectProject,
+        selectProjectsByCategory,
+        searchProjectsByTitle
       }}
     >
       {children}

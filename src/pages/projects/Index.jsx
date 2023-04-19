@@ -1,10 +1,15 @@
 import React from 'react';
+import ProjectsLayout from '../../components/project-components/projects/Projects';
 
 function Projects(props) {
+
+
     return (
-        <div>
-            Burası Projects Sayfasıdır
-        </div>
+   <section className='container mx-auto'>
+          <ProjectsLayout/>
+   </section>
+   
+   
     );
 }
 
