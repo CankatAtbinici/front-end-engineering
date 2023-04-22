@@ -5,11 +5,13 @@ import cilekZamani from "../assets/images/cilekzamani.jpg";
 import mareAqua from "../assets/images/mareaqua.png"
 import proxolab from "../assets/images/proxolab.png";
 import youTube from "../assets/images/youtube.png";
+import { FaPhp,FaReact,FaJs,FaCss3, } from 'react-icons/fa';
+import { SiTypescript } from "react-icons/si";
+import {TbSql} from "react-icons/tb"
 
 
 
-
-export const fakeData = [
+ const projectsData = [
     {
         "id":"1",
         "projectName":"Yedek Parça Depo", 
@@ -62,3 +64,46 @@ export const fakeData = [
     }
 
 ]
+
+const skillsData = [
+    {
+        id:"1",
+        title : "PHP",
+        desc: "Developed Projects by Using PHP",
+        component :<FaPhp size={180} className="text-fuchsia-600 hover:text-black text-xl"/>
+    },
+    {
+        id:"2",
+        title: "ReactJs",
+        desc: "Using React JS, developed various dynamic interfaces with different functionalities.",
+        component:<FaReact size={180} className="text-blue-600 hover:text-black text-xl "/>
+    },
+    {
+        id:"3",
+        title : "JavaScript",
+        desc: "Having a basic knowledge of JavaScript is crucial for effectively using frameworks.",
+        component : <FaJs size={180} className="bg-yellow-300 hover:bg-white"/>
+    },
+    {
+        id: "4",
+        title: "CSS",
+        desc : "You can create customized designs for web pages using CSS.",
+        component :  <FaCss3 size={180} className="bg-blue-600 text-white hover:text-black"/>
+    },
+    {
+        id:"5",
+        title :"TypeScript",
+        desc: "By using TypeScript, you can write more readable code in projects with multiple developers.",
+        component : <SiTypescript size = {180} className="bg-white-600 hover:bg-black" style={{color:"blue"}} />
+    },
+    {
+        id:"6",
+        title : "SQL",
+        desc : "SQL is a powerful tool for managing and manipulating relational databases",
+        component : <TbSql size = {180} className="bg-blue-600 text-white hover:text-black"/>
+
+    }
+
+]
+
+export {projectsData , skillsData};
