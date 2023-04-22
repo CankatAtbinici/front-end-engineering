@@ -1,11 +1,11 @@
 import { createContext, useState } from "react";
-import {fakeData} from "../fakeData/fakeData"
+import {projectsData} from "../fakeData/fakeData.js"
 
 export const Context = createContext();
 
 const ModalContext = ({ children }) => {
 
-   const [projects, setProjects] = useState(fakeData);
+   const [projects, setProjects] = useState(projectsData);
    const [searchProject, setSearchProject] = useState('');
    const [selectProject, setSelectProject] = useState('');
 
