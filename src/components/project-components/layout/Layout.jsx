@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "../header/index";
+import Header from "../header/Index";
 import UseScrollToTop from "../../../hooks/useScrool";
-import FooterProject from "../footer/index";
+import FooterProject from "../footer/Index";
 
 function Layout(props) {
   return (
