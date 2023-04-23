@@ -2,11 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 
-function singleSkill({title , description , icon , key}) {
+function singleSkill({title , description , icon , keys}) {
 
     
     return (
-        <motion.div
+        <motion.div 
+        key={keys}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, delay: 1 }}
         transition={{
@@ -15,7 +16,7 @@ function singleSkill({title , description , icon , key}) {
             delay: 0.15,
         }}
     >
-        <section aria-label="Single Skill" key={key}>
+        <section aria-label="Single Skill" >
             <div className="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-transparent">
                 <div className='flex justify-center py-4'>
                     <div className='rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light' >

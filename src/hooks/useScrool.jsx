@@ -5,13 +5,13 @@ const useScrollToTop = () => {
 	const [showScroll, setShowScroll] = useState(false);
 
 	useEffect(() => {
-		window.addEventListener('scroll', scrollToTop);
+		window.addEventListener('scroll', showScrollToTop);
 		return function cleanup() {
-			window.removeEventListener('scroll', scrollToTop);
+			window.removeEventListener('scroll', showScrollToTop);
 		};
 	});
 
-	const scrollToTop = () => {
+	const showScrollToTop = () => {
 		if (!showScroll && window.pageYOffset > 400) {
 			setShowScroll(true);
 		} else if (showScroll && window.pageYOffset <= 400) {
@@ -25,8 +25,6 @@ const useScrollToTop = () => {
 			behavior: 'smooth',
 		});
 	};
-
-	window.addEventListener('scroll', scrollToTop);
 
 	return (
 		

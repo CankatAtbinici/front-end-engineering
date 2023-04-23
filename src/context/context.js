@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import {projectsData} from "../fakeData/fakeData.js"
+import {projectsData} from "../mock-data/mockData"
 
 export const Context = createContext();
 
@@ -11,18 +11,19 @@ const ModalContext = ({ children }) => {
 
 
    //Project filter functions
-   const selectProjectsByCategory = Object.values(projects).filter((item) => {
-    return item.type.includes(selectProject);
+   const selectProjectsByCategory = projects.filter((item) => { //review : function naming search & objct values removed
+    return item.type === selectProject;
   });
   
    const searchProjectsByTitle = projects.filter((item) => {
-		const result = item.projectName.toLowerCase().includes(searchProject.toLowerCase())
+    const searchValue = searchProject.toLowerCase().trim()
+    if(!searchValue) return item;
+		const result = item.projectName.toLowerCase().includes(searchValue)
 			? item
-			: searchProject === ''
-			? item
-			: '';
+			: ''
 		return result;
 	});
+
 
  
   
