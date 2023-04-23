@@ -1,6 +1,6 @@
 import React from 'react';
 import useGetMediumArticles from "../../../hooks/useGetLinkedlnArticles";
-import SingleArticle from './singleArticle';
+import SingleArticle from './SingleArticle';
 
 
 function Index() {
