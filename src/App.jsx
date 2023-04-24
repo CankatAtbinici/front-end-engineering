@@ -7,7 +7,7 @@ import {
   Routes,
 } from "react-router-dom";
 
-import Skills from './pages/skills/index';
+import Skills from './pages/skills/Index';
 import Projects from './pages/projects/Index';
 import ContactMe from './pages/contact-me/Index';
 import Home from "./pages/home/Home"
