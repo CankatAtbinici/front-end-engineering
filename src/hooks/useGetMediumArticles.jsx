@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import {linkedlnApi} from "../services/api";
+import {mediumApi} from "../services/api";
 
 
 /**
@@ -14,7 +14,7 @@ const useGetMediumArticles = () => {
 
   const fetchArticles = useCallback(async () => {
     try {
-      const response = await linkedlnApi.get();
+      const response = await mediumApi.get();
       setArticles(response.data.items);
     } catch (error) {
       console.error(error);

@@ -1,6 +1,6 @@
 import React from "react";
 import { skillsData } from "../../../mock-data/mockData";
-import SingleSkill from "./singleSkill"
+import SingleSkill from "./SingleSkill";
 
 function Index(props) {
 

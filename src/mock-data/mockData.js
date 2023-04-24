@@ -9,7 +9,6 @@ import { FaPhp,FaReact,FaJs,FaCss3, FaBootstrap } from 'react-icons/fa';
 import { SiTypescript ,SiTailwindcss } from "react-icons/si";
 import {TbSql} from "react-icons/tb"
 
-//review: file naming mockData
 
  const projectsData = [
     {

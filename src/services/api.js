@@ -2,9 +2,9 @@
 import axios from "axios";
 
 
-
-const linkedlnApi =  axios.create({
-baseURL: "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@cankatbinici",
+const mediumUserAdress = "cankatbinici";
+const mediumApi =  axios.create({
+baseURL: `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${mediumUserAdress}`,
 })
 
 const metaDataApi  = axios.create({
@@ -12,6 +12,6 @@ const metaDataApi  = axios.create({
     Authorization: "apikey 1zshakB4gagixFsjorIdsi:629cyBQ5LmcCGJte5AWarr",
 }) 
 
-export  {linkedlnApi , metaDataApi} ;
+export  {mediumApi , metaDataApi} ;
 
 

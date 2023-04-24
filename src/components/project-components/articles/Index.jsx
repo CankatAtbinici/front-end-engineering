@@ -1,5 +1,5 @@
 import React from 'react';
-import useGetMediumArticles from "../../../hooks/useGetLinkedlnArticles";
+import useGetMediumArticles from "../../../hooks/useGetMediumArticles";
 import SingleArticle from './SingleArticle';
 
 
