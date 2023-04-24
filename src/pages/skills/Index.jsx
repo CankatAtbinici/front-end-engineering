@@ -1,5 +1,5 @@
 import React from "react";
-import SkillsGrid from "../../components/project-components/skills/Index"
+import SkillsGrid from "../../components/project-components/skills/index"
 import Head from "./Skills.head";
 
 function Skills(props) {
