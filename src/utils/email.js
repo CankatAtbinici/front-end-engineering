@@ -12,7 +12,6 @@ const email = (message = null) => {
   } else {
     return false;
   }
-
   const serviceID = "service_7m5e0k5";
   const templateID = "template_wq818mc";
   const userID = "2QQB2rGvQ3ERvrf63";
