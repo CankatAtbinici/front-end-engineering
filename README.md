@@ -63,5 +63,6 @@ Additionally, there is room for improvement in terms of SEO. Certain meta tags a
 
 Finally, there are currently only a few images used in the project. This does not currently pose a problem in terms of file size, but if more images are added, it may become necessary to implement alternative optimization methods to prevent the project file from becoming too large. This is critical both in terms of user experience and SEO optimization. 
 
+In the next step of the project, it may be necessary to strengthen the forms by writing a custom hook or utilizing libraries such as Formik and Yup. This way, we can prevent users from making erroneous inputs beforehand and ensure data accuracy.
 
 
