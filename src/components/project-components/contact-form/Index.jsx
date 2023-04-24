@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Button from '../../reusable-components/buttons/StandartButton';
-import FormInput from '../../reusable-components/input-forms/Index'
+import FormInput from '../../reusable-components/input-forms/InputForm'
 import email from '../../../utils/email';
 
 const ContactForm = () => {

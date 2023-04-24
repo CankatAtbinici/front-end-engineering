@@ -1,12 +1,15 @@
-import React from 'react';
+import React from "react";
+import SkillsGrid from "../../components/project-components/skills/Index"
+import Head from "./Skills.head";
 
 function Skills(props) {
-    return (
-        <div>
-            Burası Skills sayfasıdır.
-        </div>
-    );
+  return (
+    <section>
+    <Head/>
+   <SkillsGrid/>
+    </section>
+
+  );
 }
 
 export default Skills;
-
