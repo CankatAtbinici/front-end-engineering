@@ -1,11 +1,3 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -29,42 +21,48 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### `Developer Notes About Project`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### `Summary`
+This project is a web application created using React. The application manages different pages using Route components within a main Layout component. The Router is specified as BrowserRouter and React Router is used for page routing. A menu is used to switch between different pages of the project, which include content focused on various topics such as skills, projects, contact, home, and articles. ModalContext is a context created to manage modals used throughout the application. The App component is used to create and manage project components.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### `Third party dependencies`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Helmet is a third-party library that allows us to set various meta tags and other head elements of a web page to improve SEO performance. It helps search engines understand the content and context of the page, which can lead to better rankings in search results. By using Helmet, we were able to easily set important metadata such as title, description, for each page.
 
-## Learn More
+On the other hand, Tailwind CSS is a utility-first CSS framework that enables rapid and efficient styling of components. By using a set of pre-defined utility classes, we can quickly apply styles to various elements without having to write custom CSS. This makes the styling process faster and more consistent across the project. Additionally, Tailwind CSS has a responsive design system that makes it easy to create layouts that look great on different screen sizes.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Overall, both Helmet and Tailwind CSS are valuable tools for modern web development and helped to improve the SEO and styling of the project.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+### `Services`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Axios library is used to connect to two different APIs within the services file. The first connection is directed to an endpoint created for Medium RSS feed and an instance called “mediumApi” is created. The second connection creates an instance named metaDataApi and is used to retrieve website information from CollectAPI. These instances are then exported to be used by other components.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+### `Custom Hooks`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The first hook, useThemeSwitcher, allows switching between light and dark themes. It uses useState to manage the current theme and useEffect to apply the theme changes to the document root and save the current theme to local storage.
 
-### Advanced Configuration
+The second hook, useScrollToTop, shows a "back to top" button when the user has scrolled down the page. It uses useState to manage the visibility of the button and useEffect to add and remove an event listener for scrolling. When clicked, it scrolls the window to the top using window.scrollTo.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The third hook, useGetMediumArticles, fetches articles from a Medium RSS feed using the linkedlnApi instance from the project's API file. It uses useState to store the fetched articles and useEffect to call the API on component mount. It returns the fetched articles and a function to fetch the articles again as an array. 
 
-### Deployment
+During the customization process by other developers, there may arise a need to fetch data from different Medium pages where the customizations will be made. In this case, using a custom hook such as useGetMediumArticles would make it easier to fetch data on different pages as well. Other selection has could be create a new service to get request to medium page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+### `Development suggestions`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+As the project progresses, it becomes apparent that there are several areas that require further development. Primarily, there is a need to improve the filters. Specifically, after selecting a category, filtering by title is not currently possible. This issue needs to be addressed.
+
+Secondly, having a single Context file may cause optimization problems as the project grows. In this case, creating different context.js files for different pages and filtering algorithms, as well as refactoring the existing context.js file, would be beneficial.
+
+Additionally, there is room for improvement in terms of SEO. Certain meta tags and scripts that are useful for SEO purposes have not been added to the project, such as Google Analytics. Adding such tools after the project goes live would be highly beneficial for tracking purposes.
+
+Finally, there are currently only a few images used in the project. This does not currently pose a problem in terms of file size, but if more images are added, it may become necessary to implement alternative optimization methods to prevent the project file from becoming too large. This is critical both in terms of user experience and SEO optimization. 
+
+In the next step of the project, it may be necessary to strengthen the forms by writing a custom hook or utilizing libraries such as Formik and Yup. This way, we can prevent users from making erroneous inputs beforehand and ensure data accuracy.
+
+
