@@ -1,6 +1,6 @@
 import React from 'react';
 import useGetMediumArticles from "../../../hooks/useGetMediumArticles";
-import SingleArticle from './SingleArticle';
+import SingleArticle from './singleArticle';
 
 
 function Index() {
