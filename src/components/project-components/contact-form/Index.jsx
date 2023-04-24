@@ -93,7 +93,7 @@ const ContactForm = () => {
               aria-label="Send Message"
               size={"fullsize"}
               isResponsive={true}
-              color="succ"
+              color="first"
             />
           </div>
         </form>
